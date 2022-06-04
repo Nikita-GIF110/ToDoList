@@ -1,0 +1,15 @@
+$path: "../fonts/";
+
+@font-face {
+  font-family: Montserrat;
+  src: url($path + "montserrat-regular.woff") format("woff"), url($path + "montserrat-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url($path + "montserrat-semibold.woff") format("woff"), url($path + "montserrat-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
