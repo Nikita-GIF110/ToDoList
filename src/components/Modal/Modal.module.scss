@@ -1,0 +1,48 @@
+@import "../../scss/theme";
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  @include d-flex;
+
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(3, 26, 85, 0.7);
+  backdrop-filter: blur(5px);
+  overflow: auto;
+
+  &.hide {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out 0.3s;
+  }
+
+  &.show {
+    pointer-events: all;
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+  }
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0 8px;
+
+}
+
+.body {
+  width: 100%;
+  margin: 80px auto;
+  transform: translateY(-200px);
+  transition: transform 0.2s ease-in-out;
+
+  .modal.show & {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out 0.2s;
+  }
+}

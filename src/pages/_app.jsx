@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-// import '@scss/main.scss'
-import '../scss/main.scss'
+
+import '@scss/main.scss'
 
 const MyToDo = ({ Component, pageProps }) => <Component {...pageProps} />
 

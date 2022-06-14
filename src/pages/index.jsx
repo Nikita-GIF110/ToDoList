@@ -1,9 +1,7 @@
-import { Input } from '@components'
+import { Home } from '@components'
 
 const HomePage = () => (
-  <div>
-    <Input />
-  </div>
+  <Home />
 )
 
 export default HomePage

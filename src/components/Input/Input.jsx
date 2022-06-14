@@ -2,15 +2,13 @@ import PropTypes from 'prop-types'
 import styles from './Input.module.scss'
 
 export const Input = ({ value, onChange }) => (
-  // eslint-disable-next-line jsx-a11y/label-has-associated-control
-  <label className={styles.label}>
-    <input
-      type="text"
-      value={value}
-      onChange={onChange}
-      className={styles.input}
-    />
-  </label>
+  <input
+    type="text"
+    value={value}
+    onChange={onChange}
+    className={styles.input}
+    placeholder="Add Todo ..."
+  />
 )
 
 Input.propTypes = {
@@ -19,5 +17,5 @@ Input.propTypes = {
 }
 Input.defaultProps = {
   value: '',
-  onChange: () => {},
+  onChange: () => { },
 }

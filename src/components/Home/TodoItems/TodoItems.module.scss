@@ -1,0 +1,51 @@
+@import "../../../scss/theme.scss";
+
+.title {
+    display: block;
+    color: #90a6ec;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.content {
+}
+
+.item {
+    @include d-flex($justifyContent: flex-start);
+
+    background-color: $secondary;
+    padding: 12px;
+    border-radius: 16px;
+    color: $white;
+}
+
+.input {
+    display: none;
+
+    &:checked ~ .fake {
+    //   background: url("./checked.svg") no-repeat center, #e5e5e5;
+      border-color: $button-color;
+
+      @include child-styles {
+        transform: translateY(0);
+        visibility: visible;
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+}
+
+.fake {
+    @include d-flex;
+
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 2px solid $primary;
+
+    @include child-styles {
+        transform: translateY(-5px);
+        visibility: hidden;
+    }
+}

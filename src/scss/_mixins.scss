@@ -1,0 +1,11 @@
+@mixin d-flex($display: flex, $alignItems: center, $justifyContent: center) {
+  display: $display;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
+
+@mixin child-styles {
+  & > * {
+    @content;
+  }
+}
